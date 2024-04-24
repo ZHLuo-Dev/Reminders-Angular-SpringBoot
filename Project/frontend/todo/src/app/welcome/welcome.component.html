@@ -1,0 +1,18 @@
+<H1>Welcome!</H1>
+<br>
+<div class = "container">
+    Hi, {{name}}.
+    You can manage your reminders here. <button class="btn btn-success" routerLink="/todos">Navigate to Reminders</button>
+</div>
+
+
+
+<div class = "container">
+   Click here to get a customized message
+   <button (click) = "getWelcomeMessageWithName()" class="btn btn-success">Get</button>
+</div>
+
+<div class = "container" *ngIf="welcomeMessageFromService">
+    <H2>Customized Welcome Message</H2>
+    {{welcomeMessageFromService}}
+ </div>
